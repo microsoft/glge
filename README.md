@@ -2,7 +2,7 @@
 [**Tasks**](#tasks) |
 [**Dataset**](#get-dataset) |
 [**Leaderboard**](https://microsoft.github.io/GLGE/) |
-[**Baseline**](#run-baselines) |
+[**Baselines**](#run-baselines) |
 [**Paper**](https://arxiv.org/abs/)
 
 ## Updates
