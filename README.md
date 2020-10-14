@@ -66,17 +66,18 @@ Recommend you install to python packages by command: `pip install -r requirement
 
 To preprocess all the datasets, please use the following command to tokenize the data and generate the binary data files:
 ```
-sh script/preprocessed-all.sh
+cd script
+./preprocessed-all.sh
 ```
 Note that we tokenize each dataset with BERT-uncased tokenizer.
 
 To preprocess a specific dataset, please use the following command:
 ```
-sh script/preprocessed.sh `<DATASET>` `<VERSION>`
+./preprocessed.sh `<DATASET>` `<VERSION>`
 ```
 For example, if you want to preprocess the easy version of CNN/DailyMail, please use the following command:
 ```
-sh script/preprocessed.sh cnndm easy
+./preprocessed.sh cnndm easy
 ```
 Here `<DATASET>` can be `cnndm`, `gigaword`, `xsum`, `msnews`, `squadqg`, `msqg`, `coqa`, `personachat`. `<VERSION>` can be `easy`, `medium`, `hard`.
 
@@ -85,11 +86,12 @@ Our paper provides 4 baselines, including LSTM, Transformer, ProphetNet-base, an
     
 To train and test the baselines, please use the following command:
 ```
-sh script/run.sh `<DATASET>` `<VERSION>` `<MODEL>` `<SET>`
+cd script
+./run.sh `<DATASET>` `<VERSION>` `<MODEL>` `<SET>`
 ```
 For example, if you want to train and test the ProphetNet-large on the medium version of SQuAD 1.1 question generation dev set, please use the following command:
 ```
-sh script/run.sh squadqg medium prophetnet dev
+./run.sh squadqg medium prophetnet dev
 ```
 Here `<MODEL>` can be `lstm`, `transformer`, `prophetnet_base`, `prophetnet`, and `<SET>` can be `dev`, `test`.
     
