@@ -81,7 +81,7 @@ sh script/preprocessed.sh cnndm easy
 Here `<DATASET>` can be `cnndm`, `gigaword`, `xsum`, `msnews`, `squadqg`, `msqg`, `coqa`, `personachat`. `<VERSION>` can be `easy`, `medium`, `hard`.
 
 ### Training and Testing Pipeline
-Our paper provides 4 baselines, including LSTM, Transformer, ProphetNet-base, and ProphetNet-large basd on [[fairseq]](https://github.com/pytorch/fairseq).
+Our paper provides 4 baselines, including LSTM, Transformer, ProphetNet-base, and ProphetNet-large basd on [fairseq](https://github.com/pytorch/fairseq).
     
 To train and test the baselines, please use the following command:
 ```
@@ -93,7 +93,7 @@ sh script/run.sh squadqg medium prophetnet dev
 ```
 Here `<MODEL>` can be `lstm`, `transformer`, `prophetnet_base`, `prophetnet`, and `<SET>` can be `dev`, `test`.
     
-If you want to use [[ProphetNet]](https://arxiv.org/abs/2001.04063), please download the pretrained checkpoints at [[here]](https://github.com/microsoft/ProphetNet).
+If you want to use [ProphetNet](https://arxiv.org/abs/2001.04063), please download the pretrained checkpoints at [here](https://github.com/microsoft/ProphetNet).
 
 
 
