@@ -2,7 +2,7 @@
 [**Tasks**](#tasks) |
 [**Dataset**](#get-dataset) |
 [**Leaderboard**](https://microsoft.github.io/GLGE/) |
-[**Baseline**](https://github.com/microsoft/ProphetNet) |
+[**Baseline**](#run-baselines) |
 [**Paper**](https://arxiv.org/abs/)
 
 ## Updates
