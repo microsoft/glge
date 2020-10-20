@@ -39,7 +39,7 @@ def eval_one_dataset():
         'squadqg': f"python2 evaluate/qg/eval_on_unilm_qg.py --out {generated_file} --src {golden_src_file} --tgt {golden_file}",
         'msqg': f"python2 evaluate/qg/eval.py --out {generated_file} --src {golden_src_file} --tgt {golden_file}",
         'coqa': f"python evaluate/coqa/evaluate-v1.0.py --pred-file {generated_file} --golden-file {golden_file}",
-        'personachat': f"python evaluate/distinct_metric.py {generated_file} -n 1 2 && python2 evaluate/qg/eval.py --out {generated_file} --src {golden_src_file} --tgt {golden_file}"
+        'personachat': f"python evaluate/personachat/eval.py --pred-file {generated_file} --golden-file {golden_file}"
     }
 
     cmd=eval_template[args.dataset]
@@ -55,9 +55,10 @@ def eval_one_dataset():
             d=scale_up(d)
             print(f"{args.dataset}\trougeL/bleu4/meteor\t{d['rougeL']:.2f}/{d['bleu4']:.2f}/{d['meteor']:.2f}")
         elif args.dataset == 'personachat':
-            d=re.search(personachat_template, output.replace("\n", " ")).groupdict()
-            d=scale_up(d)
-            print(f"{args.dataset}\tbleu1/bleu2/distinct_1/distinct_2\t{d['bleu1']:.2f}/{d['bleu2']:.2f}/{d['d1']:.2f}/{d['d2']:.2f}")
+            b1, b2, d1, d2 = output.strip().split()
+            #print(b1, b2, d1, d2)
+            #d=scale_up(d)
+            print(f"{args.dataset}\tbleu1/bleu2/distinct_1/distinct_2\t{float(b1):.2f}/{float(b2):.2f}/{float(d1):.3f}/{float(d2):.3f}")
         elif args.dataset == 'coqa':
             output=float(output)*100
             print(f"{args.dataset}\tf1\t{output:.2f}")
