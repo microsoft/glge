@@ -23,7 +23,7 @@ The 8 tasks in GLGE can be categorized into 4 groups: Abstractive Text Summariza
 ### Abstractive Text Summarization Tasks
 
 #### CNN/DailyMail
-CNN/DailyMail `\citet{hermann2015cnndm}` dataset contains 220K articles from the Daily Mail newspapers, and 93K articles from the CNN. Each article contains a bullet point summary. GLGE use the non-anonymized variant used in `\cite{see2017get}`. After the pre-processing, there are 311,971 <article, summary> data pairs, where the source input is the article, and the target output is the summary which consists of multiple sentences. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
+CNN/DailyMail `\cite{hermann2015cnndm}` dataset contains 220K articles from the Daily Mail newspapers, and 93K articles from the CNN. Each article contains a bullet point summary. GLGE use the non-anonymized variant used in `\cite{see2017get}`. After the pre-processing, there are 311,971 <article, summary> data pairs, where the source input is the article, and the target output is the summary which consists of multiple sentences. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
 
 #### Gigaword
 Gigaword `\cite{rush2015neural}` contains 4M examples extracted from the news articles of the Gigaword corpus `\cite{graff2003gigaword}`. After the pre-processing, there are 3,995,559 <article, summary> data pairs, where the source input is the the first sentence of the article, and the target output is the headline that often only contains a single sentence. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
@@ -115,7 +115,7 @@ GLGE: A New General Language Generation Evaluation Benchmark
 Additionally, since GLGE is also built out of exiting 6 datasets, please ensure you cite all of them. 
 
 An example:
-We evaluate our model using the GLGE benchmark `\cite{Liu2020GLGE}`, a general langugae generation evaluation benchmark consiting of CNN/DailyMail `\citet{hermann2015cnndm}` `\cite{see2017get}`, Gigaword `\cite{rush2015neural}` `\cite{graff2003gigaword}`, XSum `\cite{narayan2018don}`, MSNews, SQuAD 1.1 `cite{rajpurkar2016squad}`, MSQG, CoQA `\cite{reddy2019coqa}`, and PersonaChat `\cite{zhang2018personalizing}`.
+We evaluate our model using the GLGE benchmark `\cite{Liu2020GLGE}`, a general langugae generation evaluation benchmark consiting of CNN/DailyMail `\cite{hermann2015cnndm}` `\cite{see2017get}`, Gigaword `\cite{rush2015neural}` `\cite{graff2003gigaword}`, XSum `\cite{narayan2018don}`, MSNews, SQuAD 1.1 `cite{rajpurkar2016squad}`, MSQG, CoQA `\cite{reddy2019coqa}`, and PersonaChat `\cite{zhang2018personalizing}`.
 
 Bibtex for external datasets used in GLGE:
 ```
