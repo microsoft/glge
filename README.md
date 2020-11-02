@@ -31,7 +31,7 @@ Gigaword `\cite{rush2015neural}` contains 4M examples extracted from the news ar
 #### XSUM
 XSUM `\cite{narayan2018don}` consists of 227K online articles from the British Broadcasting Corporation (BBC), which contains professionally written single-sentence summaries. After the pre-processing, there are 226,677 <article, summary> data pairs, where the source input is the the news article, and the target output is a single summary sentence. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
 
-### MSNews
+#### MSNews
 We collect 202K online news articles from a real world search engine. Each article contains a professionally written single-sentence headline. After the pre-processing, there are 201,947 <article, headline> data pairs, where the source input is the news article, and the target output is a news headline. ROUGE-1, ROUGE-2, and ROUGE-L are used as the evaluation metrics.
 
 ### Answer-aware Question Generation Tasks
@@ -57,7 +57,7 @@ In order to use our dataset, please navigate to [GLGE Leaderboard](https://micro
 
 
 ## Get Baselines
-We put the baselines to ProphetNet [repo](https://github.com/microsoft/ProphetNet). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
+We put the baselines to ProphetNet [repo](https://github.com/microsoft/ProphetNet/GLGE_baselines). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
 
 
 ## Leaderboard Submission
