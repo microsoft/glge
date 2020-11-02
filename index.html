@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Information about GLGE Dataset">
+		<meta name="author" content="Daniel Campos">
+		<title>GLGE</title>
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="css/scrolling-nav.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/fa-all.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/academicons.min.css" />
+		<link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-eus-prod/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/31-9d5f3f/79-6aa410/c6-ce4cc7/f3-7d8ce1/18-6a72f8/26-12908c/88-de543b/18-e17dee?ver=2.0" type="text/css" media="all">
+		<script type="text/javascript">
+			function gen_mail_to_link(lhs,rhs,subject,hypertext) {
+				document.write("<a href=\"mailto");
+				document.write(":" + lhs + "@");
+				document.write(rhs + "?subject=" + subject + "\">" + hypertext + "<\/a>");
+			}
+		</script>
+		    <script type="text/javascript">
+				var clicked = false;
+				function addDownloadLink() {
+					if (document.getElementById("TA").checked == true) {
+						//Usefulness
+						if (!clicked) {
+							document.getElementById("glgedata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://drive.google.com/file/d/1mYZScZDBnh3Y0c30do17k4RfYb7RTosf/view?usp=sharing\">GLGE Data</a>"
+							clicked = true;
+						}
+						alert("Download Links are now viewable")
+					} else {
+						alert("Please Agree to our conditions to download the dataset")
+					}
+				}
+			</script>
+			<style>
+				code {
+					  font-family: Consolas,"courier new";
+					  color: black;
+					  background-color: #f1f1f1;
+					  padding: 2px;
+					  font-size: 90%;
+					}
+			</style>
+	</head>
+	<body id="page-top">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top topnav" id="mainNav">
+			<div class="container">
+				<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+				<a class="navbar-brand js-scroll-trigger" href="#page-top">GLGE</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#intro">Intro</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#leaderboard">Leaderboard</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section id="intro">
+			<div class="container">
+				<center>
+					<img src="img/MicrosoftLogo.png">
+				</center>
+				<div class="row">
+					<p><b>G</b>eneral <b>L</b>anguage <b>G</b>eneration <b>E</b>valuation (<b>GLGE</b>) benchmark is a new multi-task benchmark for evaluating the generalization capabilities of NLG across eight language generation tasks.</p>
+					<p>GLGE contains 8 language generation tasks, including Abstractive Text Summarization (CNN/DailyMail, Gigaword, XSUM, MSNews), Answer-aware Question Generation (SQuAD 1.1, MSQG), Conversational Question Answering (CoQA), and Personalizing Dialogue (Personachat). In order to provide more diversified difficulty challenges, we provide 3 different difficulty versions (<b>GLGE-Easy</b>, <b>GLGE-Medium</b>, and <b>GLGE-Hard</b>) for each task.</p>
+				</div>
+				<div class="row">
+					<h3>Important Updates</h3> 
+				</div>
+				<div class="row" style="color:red;">
+					<ul>
+						<li>2020-11-02: We update the evaluation scripts and ProphetNet baselines on <a href="https://github.com/microsoft/ProphetNet">Link</a>.</li>
+					</ul>
+					<p></p>
+				</div>
+				<div class="row">
+					<h3>Terms and Conditions</h3>
+					<p>The GLGE datasets are intended for non-commercial research purposes only to promote advancement in the field of artificial intelligence and related areas, and is made available free of charge without extending any license or other intellectual property rights.  The dataset is provided “as is” without warranty and usage of the data has risks since we may not own the underlying rights in the documents.  We are not be liable for any damages related to use of the dataset.  Feedback is voluntarily given and can be used as we see fit. Upon violation of any of these terms, your rights to use the dataset will end automatically.</p><br /><br /> <p> If you have questions about use of the dataset or any research outputs in your products or services, we encourage you to undertake your own independent legal review.  For other questions, please feel free to contact us.</p>            
+					<div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="termAgreed" id="TA" value="true"  />
+                            I agree to terms and conditions. Upon accepting links to dataset will become available.
+                        </label>
+					</div>
+				</div>
+				<div class="row">
+					<button type="button" class="btn btn-primary btn-default" onclick='return addDownloadLink()'>Submit</button>
+				</div>
+			</div>
+		</section>
+		<section id="leaderboard" class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="table-responsive">
+						<h2>GLGE Dataset and Leaderboard</h2>
+						<h4>Tasks</h4>
+						<ol>
+							<li>CNN/DailyMail</li>
+							<li>Gigaword</li>
+							<li>XSUM</li>
+							<li>MSNews</li>
+							<li>SQuAD 1.1</li>
+							<li>MSQG</li>
+							<li>CoQA</li>
+							<li>PersonaChat</li>
+						</ol>
+						<h4>Relevant Links</h4>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/GLGE">GLGE Submission Guideline/Github</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://arxiv.org/abs/">GLGE Paper</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/ProphetNet">ProphetNet Baseline</a>
+						<div class="row">&nbsp;</div>
+						<div id="glgedata"> </div>
+						<div class="row">&nbsp;</div>
+						<h4>Leaderboard (11/02/2020-Present) ranked by <b><font color="red">GLGE-Easy</font></b> Score (average score on 8 NLG tasks)</h4>
+						<div style="text-align:center">
+							<table class="table table-striped" id='glgetable' style="font-size:75%">
+							<thead>
+								<tr>
+									<th>Rank</th>
+									<th class="col-md-9">Model</th>
+									<th class="col-md-1">Submission Date</th>
+									<th class="col-md-1">GLGE Score</th>
+									<th class="col-md-1">CNN/DailyMail</th>
+									<th class="col-md-1">Gigaword</th>
+									<th class="col-md-1">XSUM</th>
+									<th class="col-md-1">MSNews</th>
+									<th class="col-md-1">SQuAD 1.1</th>
+									<th class="col-md-1">MSQG</th>
+									<th class="col-md-1">CoQA</th>
+									<th class="col-md-1">PersonaChat</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tbody>
+									<tr>
+									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-large</a></strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</a></td>     
+									   	<td>37.0</td>
+										<td>44.2/21.1/41.3</td>
+										<td>39.5/20.4/36.6</td>
+										<td>44.4/21.3/36.4</td>
+										<td>53.9/38.5/50.9</td>
+										<td>51.7/23.4/26.9</td>
+										<td>38.2/10.0/23.1</td>
+										<td>65.2</td>
+										<td>46.7/39.0/1.3/7.5</td>
+								   </tr>
+									<tr>
+									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-base</a></strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</a></td>     
+									   	<td>34.9</td>
+										<td>42.5/19.7/39.5</td>
+										<td>38.2/19.1/35.3</td>
+										<td>39.8/17.1/32.0</td>
+										<td>50.9/36.3/48.1</td>
+										<td>47.3/19.2/23.7</td>
+										<td>37.4/8.5/22.7</td>
+										<td>64.0</td>
+										<td>45.7/38.3/1.2/6.4</td>
+								   </tr>
+                         <tr>
+									   	<td><strong>Transformer</strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</td>     
+									   	<td>22.1</td>
+										<td>39.5/16.7/36.7</td>
+										<td>36.4/17.7/33.8</td>
+										<td>22.6/5.7/18.0</td>
+										<td>43.8/29.9/41.6</td>
+										<td>29.4/4.4/10.0</td>
+										<td>26.7/4.1/15.0</td>
+										<td>14.4</td>
+										<td>38.3/33.6/0.2/0.7</td>
+								   </tr>
+                         <tr>
+									   	<td><strong>LSTM</strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</td>     
+									   	<td>20.7</td>
+										<td>37.3/15.7/34.4</td>
+										<td>33.6/15.4/31.2</td>
+										<td>21.3/4.7/17.1</td>
+										<td>40.7/28.2/39.1</td>
+										<td>26.8/3.7/8.9</td>
+										<td>20.8/2.1/11.0</td>
+										<td>14.8</td>
+										<td>42.2/35.9/0.2/0.7</td>
+								   </tr>
+									
+							</tbody>
+						</table>
+						</div>
+                <h4>Leaderboard (11/02/2020-Present) ranked by <b><font color="red">GLGE-Medium</font></b> Score (average score on 8 NLG tasks)</h4>
+						<div style="text-align:center">
+							<table class="table table-striped" id='glgetable' style="font-size:75%">
+							<thead>
+								<tr>
+									<th>Rank</th>
+									<th class="col-md-9">Model</th>
+									<th class="col-md-1">Submission Date</th>
+									<th class="col-md-1">GLGE Score</th>
+									<th class="col-md-1">CNN/DailyMail</th>
+									<th class="col-md-1">Gigaword</th>
+									<th class="col-md-1">XSUM</th>
+									<th class="col-md-1">MSNews</th>
+									<th class="col-md-1">SQuAD 1.1</th>
+									<th class="col-md-1">MSQG</th>
+									<th class="col-md-1">CoQA</th>
+									<th class="col-md-1">PersonaChat</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tbody>
+									<tr>
+
+									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-large</a></strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</a></td>     
+									   	<td>35.0</td>
+										<td>43.1/20.3/40.1</td>
+										<td>38.3/18.9/35.4</td>
+										<td>41.8/18.7/33.8</td>
+										<td>52.1/37.1/49.3</td>
+										<td>46.5/18.2/22.6</td>
+										<td>37.1/9.4/22.4</td>
+										<td>63.2</td>
+										<td>42.0/36.4/1.4/7.8</td>
+								   </tr>
+									<tr>
+									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-base</a></strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</a></td>     
+									   	<td>33.4</td>
+										<td>41.6/19.2/38.7</td>
+										<td>37.9/18.8/35.1</td>
+										<td>37.6/15.1/30.1</td>
+										<td>49.7/35.3/47.1</td>
+										<td>45.8/17.7/22.6</td>
+										<td>36.6/9.4/21.7</td>
+										<td>59.5 </td>
+										<td>41.2/36.7/1.3/6.3</td>
+								   </tr>
+                         <tr>
+									   	<td><strong>Transformer</strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</td>     
+									   	<td>19.4</td>
+										<td>35.0/11.0/32.4</td>
+										<td>36.0/17.2/33.5</td>
+										<td>24.1/6.2/19.0</td>
+										<td>35.5/22.5/33.9</td>
+										<td>27.3/3.7/9.1</td>
+										<td>21.5/2.4/11.6</td>
+										<td>10.8</td>
+										<td>37.7/29.6/0.2/0.7</td>
+								   </tr>
+                         <tr>
+									   	<td><strong>LSTM</strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</td>     
+									   	<td>18.4</td>
+										<td>35.3/14.1/32.8</td>
+										<td>32.6/14.5/30.5</td>
+										<td>20.7/4.1/16.5</td>
+										<td>30.4/16.7/29.2 </td>
+										<td>25.6/3.2/8.1</td>
+										<td>18.4/1.8/9.4</td>
+										<td>12.9</td>
+										<td>41.3/35.3/0.1/0.5</td>
+								   </tr>
+									
+							</tbody>
+						</table>
+						</div>
+<h4>Leaderboard (11/02/2020-Present) ranked by <b><font color="red">GLGE-Hard</font></b> Score (average score on 8 NLG tasks)</h4>
+						<div style="text-align:center">
+							<table class="table table-striped" id='glgetable' style="font-size:75%">
+							<thead>
+								<tr>
+									<th>Rank</th>
+									<th class="col-md-9">Model</th>
+									<th class="col-md-1">Submission Date</th>
+									<th class="col-md-1">GLGE Score</th>
+									<th class="col-md-1">CNN/DailyMail</th>
+									<th class="col-md-1">Gigaword</th>
+									<th class="col-md-1">XSUM</th>
+									<th class="col-md-1">MSNews</th>
+									<th class="col-md-1">SQuAD 1.1</th>
+									<th class="col-md-1">MSQG</th>
+									<th class="col-md-1">CoQA</th>
+									<th class="col-md-1">PersonaChat</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tbody>
+									<tr>                                     
+									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-large</a></strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</a></td>     
+									   	<td>28.4</td>
+										<td>41.2/18.7/38.0</td>
+										<td>31.9/13.4/29.4</td>
+										<td>36.7/14.1/29.4</td>
+										<td>48.4/33.6/46.0</td>
+										<td>41.7/13.3/18.7</td>
+										<td>33.0/7.9/18.8</td>
+										<td>34.8</td>
+										<td>38.5/33.8/2.1/10.4</td>
+								   </tr>
+									<tr>
+									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-base</a></strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</a></td>     
+									   	<td>27.5</td>
+										<td>40.9/18.4/37.7</td>
+										<td>31.5/13.1/29.0</td>
+										<td>33.5/11.4/26.4</td>
+										<td>46.9/32.6/44.4</td>
+										<td>40.9/12.7/18.3</td>
+										<td>31.8/6.9/17.97</td>
+										<td>33.3 </td>
+										<td>42.0/35.6/1.5/7.5</td>
+								   </tr>
+                         <tr>
+									   	<td><strong>Transformer</strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</td>     
+									   	<td>14.3</td>
+										<td>28.3/6.2/25.8</td>
+										<td>28.1/10.6/26.1</td>
+										<td>17.9/2.9/14.4</td>
+										<td>23.0/10.9/22.1</td>
+										<td>25.9/1.1/7.0</td>
+										<td>13.2/0.6/5.6</td>
+										<td>9.9</td>
+										<td>30.0/29.7/0.1/0.2</td>
+								   </tr>
+                        <tr>
+									   	<td><strong>LSTM</strong><br/> (GLGE Team)</td>
+									   	<td>2020-11-02</td>     
+									   	<td>12.6</td>
+										<td>26.2/6.8/24.2</td>
+										<td>25.9/9.0/24.2</td>
+										<td>17.4/2.4/14.1</td>
+										<td>9.5/1.0/8.9</td>
+										<td>27.3/1.0/6.7</td>
+										<td>12.5/0.4/4.9</td>
+										<td>9.8</td>
+										<td>36.8/28.7/0.1/0.4</td>
+								   </tr>
+									
+							</tbody>
+						</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mx-auto">
+						<h1>GLGE Submission Instructions</h1>
+						<p>Once you have built a model that meets your expectations on evaluation with the dev set, you can submit your test results to get official evaluation on the test set. To ensure the integrity of the official test results, we do not release the correct answers for test set to the public. To submit your model for official evaluation on the test set, follow the below steps:</p>
+						<ol>
+							<li>Generate your prediction output for the dev set.</li>
+							<li>Run the official evaluation methodologies found in the task specific git repo and verify your systems are running as expected.</li>
+							<li>Generate your output for the test set and submit the following information by <script type="text/javascript">gen_mail_to_link('glge','microsoft.com','GLGE Submission','emailing us');</script>.</li>
+						</ol>
+						<p>Your email should include:</p>
+						<ol>
+							<li>Prediction results on test set. [Required]</li>
+							<li>Prediction results on dev set. [Recommended]</li>
+							<li>Individual/Team Name: Name of the individual or the team to appear in the leaderboard. [Required]</li>
+							<li>Individual/Team Institution: Name of the institution of the individual or the team to appear in the leaderboard. [Optional]</li>
+							<li>Model code: Training code for the model. [Recommended]</li>
+							<li>Model information: Name of the model/technique to appear in the leaderboard. [Required]</li>
+							<li>Paper Information: Name, Citation, URL of the paper if model is from a published work to appear in the leaderboard. [Optional]</li>
+						</ol>
+						<p>To avoid "P-hacking" we discourage too many submissions from the same group in a short period of time.</p>
+           	 		</div>
+        		</div>
+			</div>
+		</section>
+		<section id="about" class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mx-auto">				
+						<h1>About GLGE</h1>
+						<h3></h3>
+						<div class="row">
+							<div class="col-md-12"><p><b>G</b>eneral <b>L</b>anguage \<b>G</b>}eneration <b>E</b>}valuation (<b>GLGE</b>) benchmark is a new multi-task benchmark for evaluating the generalization capabilities of NLG across eight language generation tasks.</p></div>
+							</div>
+						<h2>How to cite</h2>
+						<div style="overflow-x:scroll; white-space: nowrap">
+						<code>@article{Liu2020GLGE,<br>
+							&nbsp;&nbsp;title={GLGE: A New General Language Generation Evaluation Benchmark},<br>
+							&nbsp;&nbsp;author={Dayiheng Liu and Yeyun Gong and Yan Yu},<br>
+							&nbsp;&nbsp;journal={arXiv},<br>
+							&nbsp;&nbsp;year={2020},<br>
+							&nbsp;&nbsp;volume={}<br>
+}</code>
+						</div>
+						<p></p>
+						<p>Additionally, since GLGE is also built out of exiting 6 datasets, please ensure you cite all of them.</p>
+						<p>An example:
+We evaluate our model using the GLGE benchmark \cite{Liu2020GLGE}, a general langugae generation evaluation benchmark consiting of CNN/DailyMail \cite{hermann2015cnndm} \cite{see2017get}, Gigaword \cite{rush2015neural} \cite{graff2003gigaword}, XSum \cite{narayan2018don}, MSNews, SQuAD 1.1 cite{rajpurkar2016squad}, MSQG, CoQA \cite{reddy2019coqa}, and PersonaChat \cite{zhang2018personalizing}.</p>
+                                            
+						<div style="overflow-x:scroll; white-space: nowrap">
+						<code>inproceedings{hermann2015cnndm,<br>
+&nbsp;&nbsp;title={Teaching machines to read and comprehend},<br>
+&nbsp;&nbsp;author={Hermann, Karl Moritz and Kocisky, Tomas and Grefenstette, Edward and Espeholt, Lasse and Kay, Will and Suleyman, Mustafa and Blunsom, Phil},<br>
+&nbsp;&nbsp;booktitle={NIPS},<br>
+&nbsp;&nbsp;pages={1693--1701},<br>
+&nbsp;&nbsp;year={2015}<br>
+}<br><br>
+@inproceedings{see2017get,<br>
+&nbsp;&nbsp;title={Get to the point: Summarization with pointer-generator networks},<br>
+&nbsp;&nbsp;author={See, Abigail and Liu, Peter J and Manning, Christopher D},<br>
+&nbsp;&nbsp;booktitle={ACL},<br>
+&nbsp;&nbsp;pages={1073--1083},<br>
+&nbsp;&nbsp;year={2017}<br>
+}<br><br>
+
+@inproceedings{rush2015neural,<br>
+&nbsp;&nbsp;title={A neural attention model for abstractive sentence summarization},<br>
+&nbsp;&nbsp;author={Rush, Alexander M and Chopra, Sumit and Weston, Jason},<br>
+&nbsp;&nbsp;booktitle={EMNLP},<br>
+&nbsp;&nbsp; pages={379-389},<br>
+&nbsp;&nbsp;year={2015}<br>
+}<br><br>
+
+
+@article{graff2003gigaword,<br>
+&nbsp;&nbsp;title={English gigaword},<br>
+&nbsp;&nbsp;author={Graff, David and Kong, Junbo and Chen, Ke and Maeda, Kazuaki},<br>
+&nbsp;&nbsp;journal={Linguistic Data Consortium, Philadelphia},<br>
+&nbsp;&nbsp;volume={4},<br>
+&nbsp;&nbsp;number={1},<br>
+&nbsp;&nbsp;pages={34},<br>
+&nbsp;&nbsp;year={2003}<br>
+}<br><br>
+
+@inproceedings{narayan2018don,<br>
+&nbsp;&nbsp;title={Don't give me the details, just the summary! topic-aware convolutional neural networks for extreme summarization},<br>
+&nbsp;&nbsp;author={Narayan, Shashi and Cohen, Shay B and Lapata, Mirella},<br>
+&nbsp;&nbsp;booktitle={EMNLP},<br>
+&nbsp;&nbsp; pages={1797--1807},<br>
+&nbsp;&nbsp;year={2018}<br>
+}<br><br>
+@inproceedings{rajpurkar2016squad,<br>
+&nbsp;&nbsp;title={Squad: 100,000+ questions for machine comprehension of text},<br>
+&nbsp;&nbsp;author={Rajpurkar, Pranav and Zhang, Jian and Lopyrev, Konstantin and Liang, Percy},<br>
+&nbsp;&nbsp;booktitle={EMNLP},<br>
+&nbsp;&nbsp;pages={2383--2392},<br>
+&nbsp;&nbsp;year={2016}<br><br>                         
+@article{reddy2019coqa,<br>
+&nbsp;&nbsp;title={Coqa: A conversational question answering challenge},<br>
+&nbsp;&nbsp;author={Reddy, Siva and Chen, Danqi and Manning, Christopher D},<br>
+&nbsp;&nbsp;journal={TACL},<br>
+&nbsp;&nbsp;volume={7},<br>
+&nbsp;&nbsp;pages={249--266},<br>
+&nbsp;&nbsp;year={2019}<br><br>
+       
+@inproceedings{zhang2018personalizing,<br>
+&nbsp;&nbsp;title={Personalizing dialogue agents: I have a dog, do you have pets too?},<br>
+&nbsp;&nbsp;author={Zhang, Saizheng and Dinan, Emily and Urbanek, Jack and Szlam, Arthur and Kiela, Douwe and Weston, Jason},<br>
+&nbsp;&nbsp;booktitle={ACL},<br>
+&nbsp;&nbsp;pages={2204--2213},<br>
+&nbsp;&nbsp;year={2018}<br>
+
+							}<br><br></code></div>
+						<h2>&nbsp;</h2>
+						<h2>Current Team <script type="text/javascript">gen_mail_to_link('glge','microsoft.com','GLGE Feedback','[Email us]');</script></h2>
+						<div class="row">
+							
+							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/yegong/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2020/06/Yeyun-5ee31399c0457.png' width="150" height="150" /><br /><strong>Yeyun Gong</strong><br />Senior Researcher</a></div>
+							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/nanduan/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2019/08/me.small_.jpg' width="117" height="150" /><br /><strong>Nan Duan</strong><br />Principal Research Manager</a></div>
+							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/migon/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2020/04/Ming-Photoes.jpg' width="170" height="150" /><br /><strong>Ming Gong</strong><br />Principal Applied Scientist Manager</a></div>
+							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/lisho/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2020/04/lisho-original.jpg' width="150" height="150" /><br /><strong>Linjun Shou</strong><br />Senior Applied Scientist</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="footerArea" class="uhf" data-m="{&quot;cN&quot;:&quot;footerArea&quot;,&quot;cT&quot;:&quot;Area_coreuiArea&quot;,&quot;id&quot;:&quot;a2Body&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;Body&quot;}">
+            <div id="footerRegion" data-region-key="footerregion" data-m="{&quot;cN&quot;:&quot;footerRegion&quot;,&quot;cT&quot;:&quot;Region_coreui-region&quot;,&quot;id&quot;:&quot;r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;a2&quot;}">
+				<div id="footerUniversalFooter" data-m="{&quot;cN&quot;:&quot;footerUniversalFooter&quot;,&quot;cT&quot;:&quot;Module_coreui-universalfooter&quot;,&quot;id&quot;:&quot;m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;r1a2&quot;}" data-module-id="Category|footerRegion|coreui-region|footerUniversalFooter|coreui-universalfooter">
+					<footer id="uhf-footer" class="c-uhff context-uhf" data-uhf-mscc-rq="false" data-footer-footprint="/MSTuring/MSTuringFooter, fromService: True" data-m="{&quot;cN&quot;:&quot;Uhf footer_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;m1r1a2&quot;}">
+						<nav class="c-uhff-nav" aria-label="Footer Resource links" data-m="{&quot;cN&quot;:&quot;Footer nav_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c1m1r1a2&quot;}">
+							<div class="c-uhff-nav-row">
+								<div class="c-uhff-nav-group" data-m="{&quot;cN&quot;:&quot;footerNavColumn1_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c1c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">
+									<div class="c-heading-4">What's new</div>
+										<ul class="c-list f-bare">
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/p/surface-pro-x/8vdnrp2m6hhc?activetab=overview" data-m="{&quot;cN&quot;:&quot;Whatsnew_SurfaceProX_nav&quot;,&quot;id&quot;:&quot;n1c1c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c1c1c1m1r1a2&quot;}">Surface Pro X</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/p/surface-laptop-3/8VFGGH1R94TM?activetab=overview" data-m="{&quot;cN&quot;:&quot;Whatsnew_SurfaceLaptop3_nav&quot;,&quot;id&quot;:&quot;n2c1c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c1c1c1m1r1a2&quot;}">Surface Laptop 3</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/p/surface-pro-7/8N17J0M5ZZQS?activetab=overview" data-m="{&quot;cN&quot;:&quot;Whatsnew_SurfacePro7_nav&quot;,&quot;id&quot;:&quot;n3c1c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c1c1c1m1r1a2&quot;}">Surface Pro 7</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/windows/windows-10-apps" data-m="{&quot;cN&quot;:&quot;Footer_WhatsNew_Windows_10_apps_nav&quot;,&quot;id&quot;:&quot;n4c1c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c1c1c1m1r1a2&quot;}">Windows 10 apps</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://store.office.com/en-us/appshome.aspx?" data-m="{&quot;cN&quot;:&quot;Footer_WhatsNew_OfficeApps_nav&quot;,&quot;id&quot;:&quot;n5c1c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c1c1c1m1r1a2&quot;}">Office apps</a>
+											</li>
+										</ul>                            
+									</div>
+									<div class="c-uhff-nav-group" data-m="{&quot;cN&quot;:&quot;footerNavColumn2_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">
+										<div class="c-heading-4">Microsoft Store</div>
+										<ul class="c-list f-bare">
+											<li>
+												<a class="c-uhff-link" href="https://account.microsoft.com/" data-m="{&quot;cN&quot;:&quot;Footer_StoreandSupport_AccountProfile_nav&quot;,&quot;id&quot;:&quot;n1c2c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">Account profile</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/download" data-m="{&quot;cN&quot;:&quot;Footer_StoreandSupport_DownloadCenter_nav&quot;,&quot;id&quot;:&quot;n2c2c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">Download Center</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://go.microsoft.com/fwlink/p/?LinkID=824761&amp;clcid=0x409" data-m="{&quot;cN&quot;:&quot;Footer_StoreandSupport_SalesAndSupport_nav&quot;,&quot;id&quot;:&quot;n3c2c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">Microsoft Store support</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://go.microsoft.com/fwlink/p/?LinkID=824764&amp;clcid=0x409" data-m="{&quot;cN&quot;:&quot;MicrosoftStore_ExtendedHolidayReturns_nav&quot;,&quot;id&quot;:&quot;n4c2c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">Returns</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://account.microsoft.com/orders" data-m="{&quot;cN&quot;:&quot;Footer_StoreandSupport_OrderTracking_nav&quot;,&quot;id&quot;:&quot;n5c2c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">Order tracking</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/locations/find-a-store?icid=en-us_UF_FAS" data-m="{&quot;cN&quot;:&quot;Footer_StoreandSupport_StoreLocations_nav&quot;,&quot;id&quot;:&quot;n6c2c1c1m1r1a2&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">Store locations</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/buy-online-pick-up-in-store?icid=uhf_footer_bopuis" data-m="{&quot;cN&quot;:&quot;StoreandSupport_BuyOnlinePickUpInStore_nav&quot;,&quot;id&quot;:&quot;n7c2c1c1m1r1a2&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">Buy online, pick up in store</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/locations/events?icid=en_us_store_uhf_events" data-m="{&quot;cN&quot;:&quot;StoreSupport_Instoreevents_nav&quot;,&quot;id&quot;:&quot;n8c2c1c1m1r1a2&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c2c1c1m1r1a2&quot;}">In-store events</a>
+											</li>
+										</ul> 
+									</div>
+									<div class="c-uhff-nav-group" data-m="{&quot;cN&quot;:&quot;footerNavColumn3_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">
+										<div class="c-heading-4">Education</div>
+										<ul class="c-list f-bare">
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/education" data-m="{&quot;cN&quot;:&quot;Footer_Education_MicrosoftInEducation_nav&quot;,&quot;id&quot;:&quot;n1c3c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c1c1m1r1a2&quot;}">Microsoft in education</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/education/products/office/default.aspx" data-m="{&quot;cN&quot;:&quot;Footer_Education_OfficeForStudents_nav&quot;,&quot;id&quot;:&quot;n2c3c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c3c1c1m1r1a2&quot;}">Office for students</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://products.office.com/en-us/academic/compare-office-365-education-plans" data-m="{&quot;cN&quot;:&quot;Footer_Education_Office365ForSchools_nav&quot;,&quot;id&quot;:&quot;n3c3c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c3c1c1m1r1a2&quot;}">Office 365 for schools</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/education?icid=CNavfooter_Studentsandeducation" data-m="{&quot;cN&quot;:&quot;Footer_Education_DealsForStudentsandParents_nav&quot;,&quot;id&quot;:&quot;n4c3c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c3c1c1m1r1a2&quot;}">Deals for students &amp; parents</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://azure.microsoft.com/en-us/community/education/" data-m="{&quot;cN&quot;:&quot;Footer_MicrosoftAzureInEducation_nav&quot;,&quot;id&quot;:&quot;n5c3c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c3c1c1m1r1a2&quot;}">Microsoft Azure in education</a>
+											</li>
+										</ul>   
+									</div>
+								</div>
+								<div class="c-uhff-nav-row">
+									<div class="c-uhff-nav-group" data-m="{&quot;cN&quot;:&quot;footerNavColumn4_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c4c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">
+										<div class="c-heading-4">Enterprise</div>
+										<ul class="c-list f-bare">
+											<li>
+												<a class="c-uhff-link" href="https://azure.microsoft.com/" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_MicrosoftAzure_nav&quot;,&quot;id&quot;:&quot;n1c4c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">Azure</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=808093" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_MicrosoftAppSource_nav&quot;,&quot;id&quot;:&quot;n2c4c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">AppSource </a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/enterprise/automotive" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_Automotive_nav&quot;,&quot;id&quot;:&quot;n3c4c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">Automotive</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/enterprise/government" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_Government_nav&quot;,&quot;id&quot;:&quot;n4c4c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">Government</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/enterprise/health" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_Health_nav&quot;,&quot;id&quot;:&quot;n5c4c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">Healthcare</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/enterprise/manufacturing" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_Manufacturing_nav&quot;,&quot;id&quot;:&quot;n6c4c1c1m1r1a2&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">Manufacturing</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/enterprise/financial-services/banking-and-capital-markets" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_FinanciaServices_nav&quot;,&quot;id&quot;:&quot;n7c4c1c1m1r1a2&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">Financial services</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/enterprise/retail-consumer-goods" data-m="{&quot;cN&quot;:&quot;Footer_Enterprise_Retail_nav&quot;,&quot;id&quot;:&quot;n8c4c1c1m1r1a2&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c4c1c1m1r1a2&quot;}">Retail</a>
+											</li>
+										</ul>   
+									</div>
+									<div class="c-uhff-nav-group" data-m="{&quot;cN&quot;:&quot;footerNavColumn5_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c5c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">
+										<div class="c-heading-4">Developer</div>
+											<ul class="c-list f-bare">
+											<li>
+												<a class="c-uhff-link" href="https://visualstudio.microsoft.com/" data-m="{&quot;cN&quot;:&quot;Footer_Developer_MicrosoftVisualStudio_nav&quot;,&quot;id&quot;:&quot;n1c5c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">Microsoft Visual Studio</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://developer.microsoft.com/en-us/windows" data-m="{&quot;cN&quot;:&quot;Footer_Developer_WindowsDevCenter_nav&quot;,&quot;id&quot;:&quot;n2c5c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">Windows Dev Center</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://msdn.microsoft.com/en-us" data-m="{&quot;cN&quot;:&quot;Footer_Developer_MicrosoftDeveloperNetwork_nav&quot;,&quot;id&quot;:&quot;n3c5c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">Developer Network</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://technet.microsoft.com/en-us" data-m="{&quot;cN&quot;:&quot;Footer_Developer_TechNet_nav&quot;,&quot;id&quot;:&quot;n4c5c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">TechNet</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://developer.microsoft.com/en-us/store/register" data-m="{&quot;cN&quot;:&quot;Footer_Developer_MicrosoftDeveloperProgram_nav&quot;,&quot;id&quot;:&quot;n5c5c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">Microsoft developer program</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://channel9.msdn.com/" data-m="{&quot;cN&quot;:&quot;Footer_Developer_Channel9_nav&quot;,&quot;id&quot;:&quot;n6c5c1c1m1r1a2&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">Channel 9</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://developer.microsoft.com/en-us/office" data-m="{&quot;cN&quot;:&quot;Footer_Developer_OfficeDevCenter_nav&quot;,&quot;id&quot;:&quot;n7c5c1c1m1r1a2&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">Office Dev Center</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/garage/" data-m="{&quot;cN&quot;:&quot;Microsoft Garage_nav&quot;,&quot;id&quot;:&quot;n8c5c1c1m1r1a2&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c5c1c1m1r1a2&quot;}">Microsoft Garage</a>
+											</li>
+										</ul>
+									</div>
+									<div class="c-uhff-nav-group" data-m="{&quot;cN&quot;:&quot;footerNavColumn6_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c6c1c1m1r1a2&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">
+										<div class="c-heading-4">Company</div>
+										<ul class="c-list f-bare">
+											<li>
+												<a class="c-uhff-link" href="https://careers.microsoft.com/" data-m="{&quot;cN&quot;:&quot;Footer_Company_Careers_nav&quot;,&quot;id&quot;:&quot;n1c6c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">Careers</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/about" data-m="{&quot;cN&quot;:&quot;Footer_Company_AboutMicrosoft_nav&quot;,&quot;id&quot;:&quot;n2c6c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">About Microsoft</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://news.microsoft.com/" data-m="{&quot;cN&quot;:&quot;Footer_Company_CompanyNews_nav&quot;,&quot;id&quot;:&quot;n3c6c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">Company news</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://privacy.microsoft.com/en-us" data-m="{&quot;cN&quot;:&quot;Footer_Company_PrivacyAtMicrosoft_nav&quot;,&quot;id&quot;:&quot;n4c6c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">Privacy at Microsoft</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/investor/default.aspx" data-m="{&quot;cN&quot;:&quot;Footer_Company_Investors_nav&quot;,&quot;id&quot;:&quot;n5c6c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">Investors</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/diversity/" data-m="{&quot;cN&quot;:&quot;Footer_Company_DiversityAndInclusion_nav&quot;,&quot;id&quot;:&quot;n6c6c1c1m1r1a2&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">Diversity and inclusion</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/accessibility" data-m="{&quot;cN&quot;:&quot;Footer_Company_Accessibility_nav&quot;,&quot;id&quot;:&quot;n7c6c1c1m1r1a2&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">Accessibility</a>
+											</li>
+											<li>
+												<a class="c-uhff-link" href="https://www.microsoft.com/en-us/security/default.aspx" data-m="{&quot;cN&quot;:&quot;Footer_Company_Security_nav&quot;,&quot;id&quot;:&quot;n8c6c1c1m1r1a2&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c6c1c1m1r1a2&quot;}">Security</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							
+						</nav>
+						<div class="c-uhff-base">
+							<a id="locale-picker-link" aria-label="Content Language Selector. Currently set to English (United States)" class="c-uhff-link c-uhff-lang-selector c-glyph glyph-world" href="https://www.microsoft.com/en-us/locale.aspx" data-m="{&quot;cN&quot;:&quot;locale_picker(US)_nav&quot;,&quot;id&quot;:&quot;n7c1c1m1r1a2&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">English (United States)</a>
+							<nav aria-label="Microsoft corporate links">
+								<ul class="c-list f-bare" data-m="{&quot;cN&quot;:&quot;Corp links_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c8c1c1m1r1a2&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c1c1m1r1a2&quot;}">
+									<li>
+										<a class="c-uhff-link" href="https://www.microsoft.com/en-us/sitemap1.aspx" data-mscc-ic="false" data-m="{&quot;cN&quot;:&quot;Footer_Sitemap_nav&quot;,&quot;id&quot;:&quot;n1c8c1c1m1r1a2&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c8c1c1m1r1a2&quot;}">Sitemap</a>
+									</li>
+									<li>
+										<a class="c-uhff-link" href="https://support.microsoft.com/en-us/contactus" data-mscc-ic="false" data-m="{&quot;cN&quot;:&quot;Footer_ContactUs_nav&quot;,&quot;id&quot;:&quot;n2c8c1c1m1r1a2&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c8c1c1m1r1a2&quot;}">Contact Microsoft</a>
+									</li>
+									<li>
+										<a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-mscc-ic="false" data-m="{&quot;cN&quot;:&quot;Footer_PrivacyandCookies_nav&quot;,&quot;id&quot;:&quot;n3c8c1c1m1r1a2&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c8c1c1m1r1a2&quot;}">Privacy &amp; cookies </a>
+									</li>
+									<li>
+										<a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=206977" data-mscc-ic="false" data-m="{&quot;cN&quot;:&quot;Footer_TermsOfUse_nav&quot;,&quot;id&quot;:&quot;n4c8c1c1m1r1a2&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c8c1c1m1r1a2&quot;}">Terms of use</a>
+									</li>
+									<li>
+										<a class="c-uhff-link" href="https://www.microsoft.com/trademarks" data-mscc-ic="false" data-m="{&quot;cN&quot;:&quot;Footer_Trademarks_nav&quot;,&quot;id&quot;:&quot;n5c8c1c1m1r1a2&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c8c1c1m1r1a2&quot;}">Trademarks</a>
+									</li>
+									<li>
+										<a class="c-uhff-link" href="https://www.microsoft.com/en-us/devices/safety-and-eco " data-mscc-ic="false" data-m="{&quot;cN&quot;:&quot;Footer_SafetyAndEco_nav&quot;,&quot;id&quot;:&quot;n6c8c1c1m1r1a2&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c8c1c1m1r1a2&quot;}">Safety &amp; eco</a>
+									</li>
+									<li>
+										<a class="c-uhff-link" href="https://choice.microsoft.com" data-mscc-ic="false" data-m="{&quot;cN&quot;:&quot;Footer_AboutourAds_nav&quot;,&quot;id&quot;:&quot;n7c8c1c1m1r1a2&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c8c1c1m1r1a2&quot;}">About our ads</a>
+									</li>
+									<li>© Microsoft 2020</li>
+								</ul>
+							</nav>
+						</div>
+					</footer>
+				</div>
+			</div>
+    	</div>
+		<!-- Bootstrap core JavaScript -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<!-- Plugin JavaScript -->
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/scrolling-nav.js"></script>
+		<script>
+			var rankings = ['glgetable']
+			for(var j=0; j < rankings.length; j++) {
+				var rows = document.getElementById(rankings[j]).rows;
+				for(var i = 1, td; i < rows.length; i++){
+					td = document.createElement('td');
+					td.appendChild(document.createTextNode(i));
+					rows[i].insertBefore(td, rows[i].firstChild);
+				}
+			}
+		</script>
+	</body>
+</html>
