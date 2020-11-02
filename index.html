@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="Information about GLGE Dataset">
-		<meta name="author" content="Daniel Campos">
+		<meta name="author" content="Dayiheng Liu">
 		<title>GLGE</title>
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -369,7 +369,8 @@
 				<div class="row">
 					<div class="col-md-12 mx-auto">
 						<h1>GLGE Submission Instructions</h1>
-						<p>Once you have built a model that meets your expectations on evaluation with the dev set, you can submit your test results to get official evaluation on the test set. To ensure the integrity of the official test results, we do not release the correct answers for test set to the public. To submit your model for official evaluation on the test set, follow the below steps:</p>
+						<p>To submit your predictions for evaluation, 
+Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='glge@microsoft.com'>email your submission</a>. We will reply with your model performance.Once you have built a model that meets your expectations on evaluation with the dev set, you can submit your test results to get official evaluation on the test set. To ensure the integrity of the official test results, we do not release the correct answers for test set to the public. To submit your model for official evaluation on the test set, follow the below steps:</p>
 						<ol>
 							<li>Generate your prediction output for the dev set.</li>
 							<li>Run the official evaluation methodologies found in the task specific git repo and verify your systems are running as expected.</li>
@@ -377,8 +378,8 @@
 						</ol>
 						<p>Your email should include:</p>
 						<ol>
-							<li>Prediction results on test set. [Required]</li>
-							<li>Prediction results on dev set. [Recommended]</li>
+							<li> Prediction results on test set. Please create a single folder which contains the prediction files (see <a href="https://github.com/microsoft/glge/tree/master/submission_examples/">submission examples</a> for an example). The prediction file shoud be named with the following format: `{task}.{version}.test` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**), task is the task name (**cnndm**, **gigaword**, **xsum**, **msnews**, **sqaudqg**, **msqg**, **coqa**, and **personachat** ). [Required]</li>
+							<li>Prediction results on dev set. [Optional]</li>
 							<li>Individual/Team Name: Name of the individual or the team to appear in the leaderboard. [Required]</li>
 							<li>Individual/Team Institution: Name of the institution of the individual or the team to appear in the leaderboard. [Optional]</li>
 							<li>Model code: Training code for the model. [Recommended]</li>
@@ -478,15 +479,6 @@ We evaluate our model using the GLGE benchmark \cite{Liu2020GLGE}, a general lan
 &nbsp;&nbsp;year={2018}<br>
 
 							}<br><br></code></div>
-						<h2>&nbsp;</h2>
-						<h2>Current Team <script type="text/javascript">gen_mail_to_link('glge','microsoft.com','GLGE Feedback','[Email us]');</script></h2>
-						<div class="row">
-							
-							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/yegong/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2020/06/Yeyun-5ee31399c0457.png' width="150" height="150" /><br /><strong>Yeyun Gong</strong><br />Senior Researcher</a></div>
-							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/nanduan/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2019/08/me.small_.jpg' width="117" height="150" /><br /><strong>Nan Duan</strong><br />Principal Research Manager</a></div>
-							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/migon/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2020/04/Ming-Photoes.jpg' width="170" height="150" /><br /><strong>Ming Gong</strong><br />Principal Applied Scientist Manager</a></div>
-							<div class="col-md-4"><a href="https://www.microsoft.com/en-us/research/people/lisho/"><img src='https://www.microsoft.com/en-us/research/uploads/prod/2020/04/lisho-original.jpg' width="150" height="150" /><br /><strong>Linjun Shou</strong><br />Senior Applied Scientist</a></div>
-						</div>
 					</div>
 				</div>
 			</div>
