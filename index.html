@@ -207,7 +207,7 @@
 						</div>
                 <h4>Leaderboard (11/02/2020-Present) ranked by <b><font color="red">GLGE-Medium</font></b> Score (average score on 8 NLG tasks)</h4>
 						<div style="text-align:center">
-							<table class="table table-striped" id='glgetable' style="font-size:75%">
+							<table class="table table-striped" id='glgetable2' style="font-size:75%">
 							<thead>
 								<tr>
 									<th>Rank</th>
@@ -285,7 +285,7 @@
 						</div>
 <h4>Leaderboard (11/02/2020-Present) ranked by <b><font color="red">GLGE-Hard</font></b> Score (average score on 8 NLG tasks)</h4>
 						<div style="text-align:center">
-							<table class="table table-striped" id='glgetable' style="font-size:75%">
+							<table class="table table-striped" id='glgetable3' style="font-size:75%">
 							<thead>
 								<tr>
 									<th>Rank</th>
@@ -397,7 +397,7 @@
 						<h1>About GLGE</h1>
 						<h3></h3>
 						<div class="row">
-							<div class="col-md-12"><p><b>G</b>eneral <b>L</b>anguage \<b>G</b>}eneration <b>E</b>}valuation (<b>GLGE</b>) benchmark is a new multi-task benchmark for evaluating the generalization capabilities of NLG across eight language generation tasks.</p></div>
+							<div class="col-md-12"><p><b>G</b>eneral <b>L</b>anguage \<b>G</b>eneration <b>E</b>valuation (<b>GLGE</b>) benchmark is a new multi-task benchmark for evaluating the generalization capabilities of NLG across eight language generation tasks.</p></div>
 							</div>
 						<h2>How to cite</h2>
 						<div style="overflow-x:scroll; white-space: nowrap">
@@ -699,6 +699,24 @@ We evaluate our model using the GLGE benchmark \cite{Liu2020GLGE}, a general lan
 		<script src="js/scrolling-nav.js"></script>
 		<script>
 			var rankings = ['glgetable']
+			for(var j=0; j < rankings.length; j++) {
+				var rows = document.getElementById(rankings[j]).rows;
+				for(var i = 1, td; i < rows.length; i++){
+					td = document.createElement('td');
+					td.appendChild(document.createTextNode(i));
+					rows[i].insertBefore(td, rows[i].firstChild);
+				}
+			}
+        var rankings = ['glgetable2']
+			for(var j=0; j < rankings.length; j++) {
+				var rows = document.getElementById(rankings[j]).rows;
+				for(var i = 1, td; i < rows.length; i++){
+					td = document.createElement('td');
+					td.appendChild(document.createTextNode(i));
+					rows[i].insertBefore(td, rows[i].firstChild);
+				}
+			}
+        var rankings = ['glgetable3']
 			for(var j=0; j < rankings.length; j++) {
 				var rows = document.getElementById(rankings[j]).rows;
 				for(var i = 1, td; i < rows.length; i++){
