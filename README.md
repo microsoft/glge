@@ -56,13 +56,13 @@ In order to use our dataset, please navigate to [GLGE Leaderboard](https://micro
 
 
 ## Get Baselines
-We put the baselines to ProphetNet [repo](https://microsoft.github.io/GLGE/). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
+We put the baselines to ProphetNet [repo](https://github.com/microsoft/ProphetNet). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
 
 
 ## Leaderboard Submission
 ### Submissions
-To submit your predictions for evaluation, please create a single folder which contains the 8 sub-folders named after each task (see [reference file](outputs/) for an example). 
-Inside each folder, create the prediction file using the following format: `{version}.prediction` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**).
+To submit your predictions for evaluation, please create a single folder which contains the prediction files (see [submission_examples](submission_examples/) for an example). 
+The prediction file is named with the following format: `{task}.{version}.test` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**), task is the task name (**cnndm**, **gigaword**, **xsum**, **msnews**, **sqaudqg**, **msqg**, **coqa**, and **personachat** ).
 Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='glge@microsoft.com'>email your submission</a>. We will reply with your model performance.
 
 
