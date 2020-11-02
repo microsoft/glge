@@ -1,7 +1,7 @@
 # GLGE: A New General Language Generation Evaluation Benchmark
 [**Tasks**](#tasks) |
 [**Dataset**](#get-dataset) |
-[**Leaderboard**](https://microsoft.github.io/GLGE/) |
+[**Leaderboard**](https://microsoft.github.io/glge/) |
 [**Baselines**](#get-baselines) |
 [**Paper**](https://arxiv.org/abs/)
 
@@ -14,7 +14,7 @@ This repository contains information about the general langugae generation evalu
 
 The 8 NLG tasks in GLGE:
 
-![](./glge_overview.png)
+![](./img/glge_overview.png)
 
 
 ## Tasks
