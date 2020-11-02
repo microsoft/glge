@@ -32,13 +32,14 @@ Gigaword `\cite{rush2015neural}` contains 4M examples extracted from the news ar
 XSUM `\cite{narayan2018don}` consists of 227K online articles from the British Broadcasting Corporation (BBC), which contains professionally written single-sentence summaries. After the pre-processing, there are 226,677 <article, summary> data pairs, where the source input is the the news article, and the target output is a single summary sentence. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
 
 ### MSNews
+We collect 202K online news articles from a real world search engine. Each article contains a professionally written single-sentence headline. After the pre-processing, there are 201,947 <article, headline> data pairs, where the source input is the news article, and the target output is a news headline. ROUGE-1, ROUGE-2, and ROUGE-L are used as the evaluation metrics.
 
 ### Answer-aware Question Generation Tasks
 #### SQuAD 1.1
 SQuAD 1.1 `cite{rajpurkar2016squad}` dataset contains 536 Wikipedia articles with over 100k Amazon Mechanical Turks crowd-worker created questions posed about the articles with the corresponding answer span. Since the original hidden test set of the SQuAD 1.1 is hidden, we re-split the dataset with the examples from the original training set and dev set. After the pre-processing, there are 98,169 <answer, passage, question> data triples the source input is a Wikipedia passage along with an answer span, and the target output is a question. ROUGE-L, BLEU-4, and METEOR are used as the metrics.
 
 #### MSQG
-
+We collect 222K passages from a real world search engine. Each passage contains a highlight span and a related query. After the pre-processing, there are 221,657 <highlight span, passage, question> data triples, where the source input is a news passage along with highlight span, and the target output is a user question. ROUGE-L, BLEU-4, and METEOR are used as the metrics. 
 
 ### Answer-aware Question Generation Tasks
 
