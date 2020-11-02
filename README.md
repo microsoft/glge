@@ -2,7 +2,7 @@
 [**Tasks**](#tasks) |
 [**Dataset**](#get-dataset) |
 [**Leaderboard**](https://microsoft.github.io/GLGE/) |
-[**Baselines**](#run-baselines) |
+[**Baselines**](#get-baselines) |
 [**Paper**](https://arxiv.org/abs/)
 
 ## Updates
@@ -52,51 +52,11 @@ PersonaChat `\cite{zhang2018personalizing}` dataset is consist of 162,064 uttera
 
 
 ## Get Dataset
-In order to use our dataset, please navigate to [GLGE Leaderboard](https://microsoft.github.io/GLGE/) and agree to our terms of service. After you do so a download link will be made available.
+In order to use our dataset, please navigate to [GLGE Leaderboard](https://microsoft.github.io/glge/) and agree to our terms of service. After you do so a download link will be made available.
 
 
-## Run Baselines
-
-
-### Requirments
-Recommend you install to python packages by command: `pip install -r requirement.txt`
-
-
-### Data Preparation
-
-To preprocess all the datasets, please use the following command to tokenize the data and generate the binary data files:
-```
-cd script
-./preprocessed-all.sh
-```
-Note that we tokenize each dataset with BERT-uncased tokenizer.
-
-To preprocess a specific dataset, please use the following command:
-```
-./preprocessed.sh `<DATASET>` `<VERSION>`
-```
-For example, if you want to preprocess the easy version of CNN/DailyMail, please use the following command:
-```
-./preprocessed.sh cnndm easy
-```
-Here `<DATASET>` can be `cnndm`, `gigaword`, `xsum`, `msnews`, `squadqg`, `msqg`, `coqa`, `personachat`. `<VERSION>` can be `easy`, `medium`, `hard`.
-
-### Training and Testing Pipeline
-Our paper provides 4 baselines, including LSTM, Transformer, ProphetNet-base, and ProphetNet-large basd on [fairseq](https://github.com/pytorch/fairseq).
-    
-To train and test the baselines, please use the following command:
-```
-cd script
-./run.sh `<DATASET>` `<VERSION>` `<MODEL>` `<SET>`
-```
-For example, if you want to train and test the ProphetNet-large on the medium version of SQuAD 1.1 question generation dev set, please use the following command:
-```
-./run.sh squadqg medium prophetnet dev
-```
-Here `<MODEL>` can be `lstm`, `transformer`, `prophetnet_base`, `prophetnet`, and `<SET>` can be `dev`, `test`.
-    
-If you want to use [ProphetNet](https://arxiv.org/abs/2001.04063), please download the pretrained checkpoints at [here](https://github.com/microsoft/ProphetNet).
-
+## Get Baselines
+We put the baselines to ProphetNet [repo](https://microsoft.github.io/GLGE/). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
 
 
 ## Leaderboard Submission
