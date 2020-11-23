@@ -26,25 +26,25 @@ The 8 tasks in GLGE can be categorized into 4 groups: Abstractive Text Summariza
 CNN/DailyMail `\cite{hermann2015cnndm}` dataset contains 220K articles from the Daily Mail newspapers, and 93K articles from the CNN. Each article contains a bullet point summary. GLGE use the non-anonymized variant used in `\cite{see2017get}`. After the pre-processing, there are 311,971 <article, summary> data pairs, where the source input is the article, and the target output is the summary which consists of multiple sentences. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
 
 #### Gigaword
-Gigaword `\cite{rush2015neural}` contains 4M examples extracted from the news articles of the Gigaword corpus `\cite{graff2003gigaword}`. After the pre-processing, there are 3,995,559 <article, summary> data pairs, where the source input is the the first sentence of the article, and the target output is the headline that often only contains a single sentence. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
+Gigaword `\cite{rush2015neural}` contains 4M examples extracted from the news articles of the Gigaword corpus `\cite{graff2003gigaword}`. After the pre-processing, there are 3,995,559 <passage, summary> data pairs, where the source input is the the first sentence of the article, and the target output is the headline that often only contains a single sentence. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
 
 #### XSUM
 XSUM `\cite{narayan2018don}` consists of 227K online articles from the British Broadcasting Corporation (BBC), which contains professionally written single-sentence summaries. After the pre-processing, there are 226,677 <article, summary> data pairs, where the source input is the the news article, and the target output is a single summary sentence. ROUGE-1, ROUGE-2, and ROUGE-L are used as the metrics.
 
 #### MSNews
-We collect 202K online news articles from a real world search engine. Each article contains a professionally written single-sentence headline. After the pre-processing, there are 201,947 <article, headline> data pairs, where the source input is the news article, and the target output is a news headline. ROUGE-1, ROUGE-2, and ROUGE-L are used as the evaluation metrics.
+MicroSoft News headline generation (MSNews). We random select 151K online news articles from 2012-1-1 to 2020-9-1 from a real-world news search engine. Each article contains a professionally written single-sentence headline. After the pre-processing, there are 151,140 <article, headline> data pairs, where the source input is the news article, and the target output is a news headline. 
 
 ### Answer-aware Question Generation Tasks
 #### SQuAD 1.1
 SQuAD 1.1 `cite{rajpurkar2016squad}` dataset contains 536 Wikipedia articles with over 100k Amazon Mechanical Turks crowd-worker created questions posed about the articles with the corresponding answer span. Since the original hidden test set of the SQuAD 1.1 is hidden, we re-split the dataset with the examples from the original training set and dev set. After the pre-processing, there are 98,169 <answer, passage, question> data triples the source input is a Wikipedia passage along with an answer span, and the target output is a question. ROUGE-L, BLEU-4, and METEOR are used as the metrics.
 
 #### MSQG
-We collect 222K passages from a real world search engine. Each passage contains a highlight span and a related query. After the pre-processing, there are 221,657 <highlight span, passage, question> data triples, where the source input is a news passage along with highlight span, and the target output is a user question. ROUGE-L, BLEU-4, and METEOR are used as the metrics. 
+MicroSoft Question Generation (MSQG) is another dataset we collected, which is a new challenge dataset. the questions in this dataset are freely edited by daily users. For MSQG, we collect 220K passages from a real world search engine. Each passage contains a highlight span and a related query, we regard the queries as questions in this dataset. After the pre-processing, there are 220,088 <highlight span, passage, question> data triples, where the source input is a news passage along with highlight span, and the target output is a user question. ROUGE-L, BLEU-4, and METEOR are used as the metrics. 
 
 ### Answer-aware Question Generation Tasks
 
 #### CoQA
-CoQA `\cite{reddy2019coqa}` dataset contains 127K questions with answers, obtained from 8k conversations about text passages from seven diverse domains. After the pre-processing, there are 116,630 <conversation history, passage, question, answer> data 4-tuples, where the source input is a sequence of conversation history along with a given question and a give passage, and the target output is a free-form answer text. F1-Score is used as the metrics.
+CoQA `\cite{reddy2019coqa}` dataset contains 127K questions with answers, obtained from 8K conversations about text passages from seven diverse domains. After the pre-processing, there are 116,630 <conversation history, passage, question, answer> data 4-tuples, where the source input is a sequence of conversation history along with a given question and a give passage, and the target output is a free-form answer text. F1-Score is used as the metrics.
 
 ### Conversational Question Answering Task
 
@@ -58,6 +58,10 @@ In order to use our dataset, please navigate to [GLGE Leaderboard](https://micro
 
 ## Get Baselines
 We put the baselines to ProphetNet [repo](https://github.com/microsoft/ProphetNet/GLGE_baselines). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
+
+The implementation of BART can refer to [repo](https://github.com/pytorch/fairseq/tree/master/examples/bart).
+
+The implementation of MASS can refer to [repo](https://github.com/microsoft/MASS). 
 
 
 ## Leaderboard Submission
