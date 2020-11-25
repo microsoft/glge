@@ -57,7 +57,7 @@ In order to use our dataset, please navigate to [GLGE Leaderboard](https://micro
 
 
 ## Get Baselines
-We put the baselines to ProphetNet [repo](https://github.com/microsoft/ProphetNet/GLGE_baselines). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
+We put the baselines to ProphetNet [repo](https://github.com/microsoft/ProphetNet/tree/master/GLGE_baselines). It contains the pre-trained models, fine-tuning scripts, and evaluation scripts for GLGE.
 
 The implementation of BART can refer to [repo](https://github.com/pytorch/fairseq/tree/master/examples/bart).
 
