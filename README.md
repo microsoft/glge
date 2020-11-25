@@ -3,7 +3,7 @@
 [**Dataset**](#get-dataset) |
 [**Leaderboard**](https://microsoft.github.io/glge/) |
 [**Baselines**](#get-baselines) |
-[**Paper**](https://arxiv.org/abs/)
+[**Paper**](https://arxiv.org/abs/2011.11928)
 
 <!--## Updates 
 
@@ -68,14 +68,20 @@ The implementation of MASS can refer to [repo](https://github.com/microsoft/MASS
 
 ### Submissions
 To submit your predictions for evaluation, please create a single folder which contains the prediction files (see [submission_examples](submission_examples/) for an example). 
-The prediction file shoud be named with the following format: `{task}.{version}.test` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**), task is the task name (**cnndm**, **gigaword**, **xsum**, **msnews**, **sqaudqg**, **msqg**, **coqa**, and **personachat**).
+The prediction file shoud be named with the following format: `{task}.{version}.test` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**), task is the task name (**cnndm**, **gigaword**, **xsum**, **msnews**, **sqaudqg**, **msqg**, **coqa**, and **personachat** ).
 Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='glge@microsoft.com'>email your submission</a>. We will reply with your model performance.
 
 
 ## Paper
 If you use our benchmark or dataset, please cite our paper `\cite{Liu2020GLGE}`.
 ```
-GLGE: A New General Language Generation Evaluation Benchmark
+@article{Liu2020GLGE,
+  title={GLGE: A New General Language Generation Evaluation Benchmark},
+  author={Dayiheng Liu, Yu Yan, Yeyun Gong, Weizhen Qi, Hang Zhang, Jian Jiao, Weizhu Chen, Jie Fu, Linjun Shou, Ming Gong, Pengcheng Wang, Jiusheng Chen, Daxin Jiang, Jiancheng Lv, Ruofei Zhang, Winnie Wu, Ming Zhou and Nan Duan},
+  journal={arXiv},
+  year={2020},
+  volume={abs/2011.11928}
+}
 ```
 
 Additionally, since GLGE is also built out of exiting 6 datasets, please ensure you cite all of them. 
