@@ -10,7 +10,7 @@
 * 2020-10-14: Initialization.-->
 
 ## Introduction
-This repository contains information about the general langugae generation evaluation benchmark GLGE, which is composed of 8 language generation tasks, including Abstractive Text Summarization (CNN/DailyMail, Gigaword, XSUM, MSNews), Answer-aware Question Generation (SQuAD 1.1, MSQG), Conversational Question Answering (CoQA), and Personalizing Dialogue (Personachat). In order to provide more diversified difficulty challenges, we provide 3 different difficulty versions (**easy**, **medium**, and **hard**) for each task.
+This repository contains information about the general language generation evaluation benchmark GLGE, which is composed of 8 language generation tasks, including Abstractive Text Summarization (CNN/DailyMail, Gigaword, XSUM, MSNews), Answer-aware Question Generation (SQuAD 1.1, MSQG), Conversational Question Answering (CoQA), and Personalizing Dialogue (Personachat). In order to provide more diversified difficulty challenges, we provide 3 different difficulty versions (**easy**, **medium**, and **hard**) for each task.
 
 The 8 NLG tasks in GLGE:
 
