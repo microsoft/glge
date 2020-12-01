@@ -41,12 +41,12 @@ SQuAD 1.1 `cite{rajpurkar2016squad}` dataset contains 536 Wikipedia articles wit
 #### MSQG
 MicroSoft Question Generation (MSQG) is another dataset we collected, which is a new challenge dataset. the questions in this dataset are freely edited by daily users. For MSQG, we collect 220K passages from a real world search engine. Each passage contains a highlight span and a related query, we regard the queries as questions in this dataset. After the pre-processing, there are 220,088 <highlight span, passage, question> data triples, where the source input is a news passage along with highlight span, and the target output is a user question. ROUGE-L, BLEU-4, and METEOR are used as the metrics. 
 
-### Answer-aware Question Generation Tasks
+### Conversational Question Answering Task
 
 #### CoQA
 CoQA `\cite{reddy2019coqa}` dataset contains 127K questions with answers, obtained from 8K conversations about text passages from seven diverse domains. After the pre-processing, there are 116,630 <conversation history, passage, question, answer> data 4-tuples, where the source input is a sequence of conversation history along with a given question and a give passage, and the target output is a free-form answer text. F1-Score is used as the metrics.
 
-### Conversational Question Answering Task
+### Personalizing Dialogue Task
 
 #### PersonaChat
 PersonaChat `\cite{zhang2018personalizing}` dataset is consist of 162,064 utterances, which require models generate responses according to given multi-turn conversations and persona profile. After the pre-processing, there are 151,157 <persona profile description text, conversation history, response> data triples, where the source input is a sequence of conversation history along with several sentences of persona profile description text, and the target output is a response. BLEU-1, BLEU-2, Distinct-1, and Distinct-2 are used as the metrics.
