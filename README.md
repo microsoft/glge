@@ -63,6 +63,7 @@ The implementation of BART can refer to [repo](https://github.com/pytorch/fairse
 
 The implementation of MASS can refer to [repo](https://github.com/microsoft/MASS). 
 
+It should be noted that, considering the computational cost, we have not carefully adjusted the hyperparameters of all baseline methods. Better results may be obtained by adjusting the default hyperparameters.
 
 ## Leaderboard Submission
 
