@@ -69,7 +69,7 @@ The implementation of MASS can refer to [repo](https://github.com/microsoft/MASS
 ### Submissions
 To submit your predictions for evaluation, please create a single folder which contains the prediction files (see [submission_examples](submission_examples/) for an example). 
 The prediction file shoud be named with the following format: `{task}.{version}.test` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**), task is the task name (**cnndm**, **gigaword**, **xsum**, **msnews**, **sqaudqg**, **msqg**, **coqa**, and **personachat** ).
-Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='yegong@microsoft.com'>email your submission</a>. We will reply with your model performance.
+Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='glge@microsoft.com'>email your submission</a>. We will reply with your model performance.
 
 
 ## Paper
