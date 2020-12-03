@@ -72,7 +72,8 @@ To submit your predictions for evaluation, please create a single folder which c
 The prediction file shoud be named with the following format: `{task}.{version}.test` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**), task is the task name (**cnndm**, **gigaword**, **xsum**, **msnews**, **sqaudqg**, **msqg**, **coqa**, and **personachat** ).
 Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='glge@microsoft.com'>email your submission</a>. We will reply with your model performance.
 
-
+We allow **partial submission** of results, such as the result of a single task on the GLGE-easy.
+ 
 ## Paper
 If you use our benchmark or dataset, please cite our paper `\cite{Liu2020GLGE}`.
 ```
