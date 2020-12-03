@@ -814,7 +814,7 @@ We evaluate our model using the GLGE benchmark \cite{Liu2020GLGE}, a general lan
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 		<script>
 			$(document).ready( function () {
-				var options = {"paging": false, "searching": false, "info": false, "order": [[2, 'desc']]}
+				var options = {"paging": false, "searching": false, "info": false, "order": [[2, 'desc']], "columnDefs": [{orderable: false, targets: 0}]}
 				$('#glgetable').DataTable(options);
 				$('#glgetable2').DataTable(options);
 				$('#glgetable3').DataTable(options);
