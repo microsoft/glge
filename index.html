@@ -14,6 +14,7 @@
 		<link href="css/fa-all.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/academicons.min.css" />
 		<link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-eus-prod/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/31-9d5f3f/79-6aa410/c6-ce4cc7/f3-7d8ce1/18-6a72f8/26-12908c/88-de543b/18-e17dee?ver=2.0" type="text/css" media="all">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 		<script type="text/javascript">
 			function gen_mail_to_link(lhs,rhs,subject,hypertext) {
 				document.write("<a href=\"mailto");
@@ -44,6 +45,9 @@
 					  padding: 2px;
 					  font-size: 90%;
 					}
+				h4.table-title {
+					padding-top: 2em;
+				}
 			</style>
 	</head>
 	<body id="page-top">
@@ -125,15 +129,12 @@
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/GLGE">GLGE Submission Guideline/Github</a>
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://arxiv.org/abs/2011.11928">GLGE Paper</a>
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/ProphetNet/tree/master/GLGE_baselines">ProphetNet Baseline</a>
-						<div class="row">&nbsp;</div>
 						<div id="glgedata"> </div>
-						<div class="row">&nbsp;</div>
-						<h4>Leaderboard (11/24/2020-Present) ranked by <b><font color="red">GLGE-Easy</font></b> Score (average score on 8 NLG tasks)</h4>
+						<h4 class="table-title">Leaderboard (11/24/2020-Present) ranked by <b><font color="red">GLGE-Easy</font></b> Score (average score on 8 NLG tasks)</h4>
 						<div style="text-align:center">
 							<table class="table table-striped" id='glgetable' style="font-size:75%">
 							<thead>
 								<tr>
-									<th>Rank</th>
 									<th class="col-md-9">Model</th>
 									<th class="col-md-1">Submission Date</th>
 									<th class="col-md-1">GLGE Score</th>
@@ -148,7 +149,6 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tbody>
 									<tr>
 									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-large</a></strong><br/> (GLGE Team)</td>
 									   	<td>2020-11-24</a></td>     
@@ -256,12 +256,11 @@
 							</tbody>
 						</table>
 						</div>
-                <h4>Leaderboard (11/24/2020-Present) ranked by <b><font color="red">GLGE-Medium</font></b> Score (average score on 8 NLG tasks)</h4>
+                <h4 class="table-title">Leaderboard (11/24/2020-Present) ranked by <b><font color="red">GLGE-Medium</font></b> Score (average score on 8 NLG tasks)</h4>
 						<div style="text-align:center">
 							<table class="table table-striped" id='glgetable2' style="font-size:75%">
 							<thead>
 								<tr>
-									<th>Rank</th>
 									<th class="col-md-9">Model</th>
 									<th class="col-md-1">Submission Date</th>
 									<th class="col-md-1">GLGE Score</th>
@@ -276,7 +275,6 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tbody>
 									<tr>
 									   	<td><strong><a href="https://arxiv.org/abs/2001.04063">ProphetNet-large</a></strong><br/> (GLGE Team)</td>
 									   	<td>2020-11-24</a></td>     
@@ -371,12 +369,11 @@
 							</tbody>
 						</table>
 						</div>
-                <h4>Leaderboard (11/24/2020-Present) ranked by <b><font color="red">GLGE-Hard</font></b> Score (average score on 8 NLG tasks)</h4>
+                <h4 class="table-title">Leaderboard (11/24/2020-Present) ranked by <b><font color="red">GLGE-Hard</font></b> Score (average score on 8 NLG tasks)</h4>
 						<div style="text-align:center">
 							<table class="table table-striped" id='glgetable3' style="font-size:75%">
 							<thead>
 								<tr>
-									<th>Rank</th>
 									<th class="col-md-9">Model</th>
 									<th class="col-md-1">Submission Date</th>
 									<th class="col-md-1">GLGE Score</th>
@@ -391,7 +388,6 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tbody>
                          <tr>
 									   	<td><strong><a href="https://arxiv.org/abs/1910.13461">BART-large</a></strong><br/> (GLGE Team)</td>
 									   	<td>2020-11-24</a></td>     
@@ -815,34 +811,14 @@ We evaluate our model using the GLGE benchmark \cite{Liu2020GLGE}, a general lan
 		<!-- Plugin JavaScript -->
 		<script src="js/jquery.easing.min.js"></script>
 		<script src="js/scrolling-nav.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 		<script>
-			var rankings = ['glgetable']
-			for(var j=0; j < rankings.length; j++) {
-				var rows = document.getElementById(rankings[j]).rows;
-				for(var i = 1, td; i < rows.length; i++){
-					td = document.createElement('td');
-					td.appendChild(document.createTextNode(i));
-					rows[i].insertBefore(td, rows[i].firstChild);
-				}
-			}
-        var rankings = ['glgetable2']
-			for(var j=0; j < rankings.length; j++) {
-				var rows = document.getElementById(rankings[j]).rows;
-				for(var i = 1, td; i < rows.length; i++){
-					td = document.createElement('td');
-					td.appendChild(document.createTextNode(i));
-					rows[i].insertBefore(td, rows[i].firstChild);
-				}
-			}
-        var rankings = ['glgetable3']
-			for(var j=0; j < rankings.length; j++) {
-				var rows = document.getElementById(rankings[j]).rows;
-				for(var i = 1, td; i < rows.length; i++){
-					td = document.createElement('td');
-					td.appendChild(document.createTextNode(i));
-					rows[i].insertBefore(td, rows[i].firstChild);
-				}
-			}
+			$(document).ready( function () {
+				var options = {"paging": false, "searching": false, "info": false, "order": [[2, 'desc']]}
+				$('#glgetable').DataTable(options);
+				$('#glgetable2').DataTable(options);
+				$('#glgetable3').DataTable(options);
+			} );
 		</script>
 	</body>
 </html>
