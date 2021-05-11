@@ -6,7 +6,7 @@
 [**Paper**](https://arxiv.org/abs/2011.11928)
 
 ## Updates 
-* 2021-05-11: We fixed the issue where inconsistent post-processing led to low ROUGE scores for our baselines in gigaword test set.
+* 2021-05-11: We fixed the issue where inconsistent post-processing led to low ROUGE scores of our baselines for the gigaword test set.
 
 
 
