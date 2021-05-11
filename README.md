@@ -5,9 +5,10 @@
 [**Baselines**](#get-baselines) |
 [**Paper**](https://arxiv.org/abs/2011.11928)
 
-<!--## Updates 
+## Updates 
+* 2021-05-11: We fixed the issue where inconsistent post-processing led to low ROUGE scores for our baselines in gigaword test set.
 
-* 2020-10-14: Initialization.-->
+
 
 ## Introduction
 This repository contains information about the general langugae generation evaluation benchmark GLGE, which is composed of 8 language generation tasks, including Abstractive Text Summarization (CNN/DailyMail, Gigaword, XSUM, MSNews), Answer-aware Question Generation (SQuAD 1.1, MSQG), Conversational Question Answering (CoQA), and Personalizing Dialogue (Personachat). In order to provide more diversified difficulty challenges, we provide 3 different difficulty versions (**easy**, **medium**, and **hard**) for each task.
