@@ -11,7 +11,7 @@
 
 
 ## Introduction
-This repository contains information about the general langugae generation evaluation benchmark GLGE, which is composed of 8 language generation tasks, including Abstractive Text Summarization (CNN/DailyMail, Gigaword, XSUM, MSNews), Answer-aware Question Generation (SQuAD 1.1, MSQG), Conversational Question Answering (CoQA), and Personalizing Dialogue (Personachat). In order to provide more diversified difficulty challenges, we provide 3 different difficulty versions (**easy**, **medium**, and **hard**) for each task.
+This repository contains information about the general language generation evaluation benchmark GLGE, which is composed of 8 language generation tasks, including Abstractive Text Summarization (CNN/DailyMail, Gigaword, XSUM, MSNews), Answer-aware Question Generation (SQuAD 1.1, MSQG), Conversational Question Answering (CoQA), and Personalizing Dialogue (Personachat). In order to provide more diversified difficulty challenges, we provide 3 different difficulty versions (**easy**, **medium**, and **hard**) for each task.
 
 The 8 NLG tasks in GLGE:
 
@@ -42,12 +42,12 @@ SQuAD 1.1 `cite{rajpurkar2016squad}` dataset contains 536 Wikipedia articles wit
 #### MSQG
 MicroSoft Question Generation (MSQG) is another dataset we collected, which is a new challenge dataset. the questions in this dataset are freely edited by daily users. For MSQG, we collect 220K passages from a real world search engine. Each passage contains a highlight span and a related query, we regard the queries as questions in this dataset. After the pre-processing, there are 220,088 <highlight span, passage, question> data triples, where the source input is a news passage along with highlight span, and the target output is a user question. ROUGE-L, BLEU-4, and METEOR are used as the metrics. 
 
-### Answer-aware Question Generation Tasks
+### Conversational Question Answering Task
 
 #### CoQA
 CoQA `\cite{reddy2019coqa}` dataset contains 127K questions with answers, obtained from 8K conversations about text passages from seven diverse domains. After the pre-processing, there are 116,630 <conversation history, passage, question, answer> data 4-tuples, where the source input is a sequence of conversation history along with a given question and a give passage, and the target output is a free-form answer text. F1-Score is used as the metrics.
 
-### Conversational Question Answering Task
+### Personalizing Dialogue Task
 
 #### PersonaChat
 PersonaChat `\cite{zhang2018personalizing}` dataset is consist of 162,064 utterances, which require models generate responses according to given multi-turn conversations and persona profile. After the pre-processing, there are 151,157 <persona profile description text, conversation history, response> data triples, where the source input is a sequence of conversation history along with several sentences of persona profile description text, and the target output is a response. BLEU-1, BLEU-2, Distinct-1, and Distinct-2 are used as the metrics.
@@ -71,7 +71,7 @@ It should be noted that, considering the computational cost, we have not careful
 ### Submissions
 To submit your predictions for evaluation, please create a single folder which contains the prediction files (see [submission_examples](submission_examples/) for an example). 
 The prediction file shoud be named with the following format: `{task}.{version}.test` where `{version}` is the difficulty versions (**easy**, **medium**, and **hard**), task is the task name (**cnndm**, **gigaword**, **xsum**, **msnews**, **sqaudqg**, **msqg**, **coqa**, and **personachat** ).
-Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='glge@microsoft.com'>email your submission</a>. We will reply with your model performance.
+Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='mailto:glge@microsoft.com'>email your submission</a>. We will reply with your model performance.
 
 We allow **partial submission** of results, such as the result of a single task on the GLGE-easy.
  
