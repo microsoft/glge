@@ -6,6 +6,7 @@
 [**Paper**](https://arxiv.org/abs/2011.11928)
 
 ## Updates 
+* 2021-12-01: In order to facilitate researchers to evaluate their NLG models, we make the [test set](https://drive.google.com/file/d/17VVeZORx-_NpO1KI9YpuWWfzSkTTKGK6/view?usp=sharing) of GLGE public. The evaluation script can be found [here](https://github.com/microsoft/ProphetNet/tree/master/GLGE_baselines).
 * 2021-05-11: We fixed the issue where inconsistent post-processing led to low ROUGE scores of our baselines for the gigaword test set.
 
 
@@ -74,6 +75,8 @@ The prediction file shoud be named with the following format: `{task}.{version}.
 Please validate that you have done this correctly by evaluating against the development file. Once that is done <a href='glge@microsoft.com'>email your submission</a>. We will reply with your model performance.
 
 We allow **partial submission** of results, such as the result of a single task on the GLGE-easy.
+
+In order to facilitate researchers to evaluate their NLG models, we make the [test set](https://drive.google.com/file/d/17VVeZORx-_NpO1KI9YpuWWfzSkTTKGK6/view?usp=sharing) of GLGE public. The evaluation script can be found [here](https://github.com/microsoft/ProphetNet/tree/master/GLGE_baselines).
  
 ## Paper
 If you use our benchmark or dataset, please cite our paper `\cite{Liu2020GLGE}`.
